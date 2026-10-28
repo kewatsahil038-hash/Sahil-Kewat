@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JARVIS</string>
+    <string name="accessibility_service_name">JARVIS Phone Controller</string>
+    <string name="accessibility_service_description">Enables JARVIS AI to perform hands-free screen navigation, scroll content, navigate Back/Home, and assist with authorized device actions.</string>
+</resources>

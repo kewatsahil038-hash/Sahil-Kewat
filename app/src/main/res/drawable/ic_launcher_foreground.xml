@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Arc Reactor Ring -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M54,32 A22,22 0 1 0 54.01,32" />
+
+    <!-- Reactor Spokes / Tri-Segments -->
+    <path
+        android:fillColor="#00B0FF"
+        android:pathData="M54,36 L56,44 L52,44 Z" />
+    <path
+        android:fillColor="#00B0FF"
+        android:pathData="M54,72 L52,64 L56,64 Z" />
+    <path
+        android:fillColor="#00B0FF"
+        android:pathData="M36,54 L44,52 L44,56 Z" />
+    <path
+        android:fillColor="#00B0FF"
+        android:pathData="M72,54 L64,56 L64,52 Z" />
+
+    <!-- Mid Inner Ring -->
+    <path
+        android:strokeColor="#76FFFF"
+        android:strokeWidth="1.8"
+        android:pathData="M54,40 A14,14 0 1 0 54.01,40" />
+
+    <!-- Core Glowing Center -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,47 A7,7 0 1 0 54.01,47" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,51 A3,3 0 1 0 54.01,51" />
+</vector>

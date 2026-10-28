@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS",
+  "description": "Android Personal AI Voice Agent understanding Hindi, Hinglish, and English with device control, screen actions, and app integrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

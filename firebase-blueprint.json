@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JarvisAssistantSchema",
+  "description": "Firestore data schema for JARVIS AI Voice Assistant cloud command history and user preferences",
+  "type": "object",
+  "collections": {
+    "users": {
+      "description": "User profiles and settings",
+      "type": "document",
+      "path": "users/{userId}",
+      "subcollections": {
+        "commands": {
+          "description": "Cloud synchronized log of JARVIS voice/text commands and structured actions",
+          "type": "document",
+          "path": "users/{userId}/commands/{commandId}",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "userId": { "type": "string" },
+              "rawCommand": { "type": "string" },
+              "actionType": { "type": "string" },
+              "target": { "type": "string" },
+              "details": { "type": "string" },
+              "status": { "type": "string" },
+              "spokenResponseHindi": { "type": "string" },
+              "spokenResponseEnglish": { "type": "string" },
+              "aiModel": { "type": "string" },
+              "createdAt": { "type": "timestamp" },
+              "updatedAt": { "type": "timestamp" }
+            },
+            "required": ["userId", "rawCommand", "actionType", "status", "createdAt", "updatedAt"]
+          }
+        },
+        "preferences": {
+          "description": "User assistant preferences and AI configuration",
+          "type": "document",
+          "path": "users/{userId}/preferences/{prefId}",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "userId": { "type": "string" },
+              "preferredLanguage": { "type": "string" },
+              "speechSpeed": { "type": "number" },
+              "speechPitch": { "type": "number" },
+              "aiEngine": { "type": "string" },
+              "cloudSyncEnabled": { "type": "boolean" },
+              "createdAt": { "type": "timestamp" },
+              "updatedAt": { "type": "timestamp" }
+            },
+            "required": ["userId", "preferredLanguage", "aiEngine", "cloudSyncEnabled", "createdAt", "updatedAt"]
+          }
+        }
+      }
+    }
+  }
+}
